@@ -1,0 +1,50 @@
+/* 
+bg:#2c3e50  #a55eea
+progress:48deg, #f200ff 0%, #ffba42 100%
+
+*/
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    width:  100%;
+    height: 100vh;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progressbar{
+    width: 400px;
+    height: 50px;
+    background-color:#a55eea ;
+    border-radius: 25px;
+    padding: 5px;
+}
+.box{
+    width:  0%;
+    height:  100%;
+    background: linear-gradient(48deg, #f200ff 0%, #ffba42 100%);
+    border-radius: 25px;
+    animation-name: progressbar;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+.box p{
+    padding: 8px;
+    color: white;
+    font-size: 18px;
+}
+@keyframes progressbar {
+    from{
+        width:  0%;
+    }
+    to{
+        width:  100%;
+    }
+}
